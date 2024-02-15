@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!-- Creation of Dashboard -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <!-- Include Tailwind CSS CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body
+    class="bg-gray-100"
+    style="
+      background-image: url('https://www.quintly.com/hs-fs/hubfs/Design/Mayday/Various%20Assets/SMA%20Guide%20Hero-04-04.png?width=1422&name=SMA%20Guide%20Hero-04-04.png');
+      background-size: cover;
+      background-position: center;
+    "
+  >
+    <header class="bg-blue-500 py-4">
+      <div class="container mx-auto flex justify-between items-center">
+        <h1 class="text-4xl font-bold text-white">Dashboard</h1>
+        <nav>
+          <ul class="flex space-x-4">
+            <li>
+              <a class="text-white hover:text-gray-200" href="home.html"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a class="text-white hover:text-gray-200" href="story.html"
+                >Story</a
+              >
+            </li>
+            <li>
+              <a class="text-white hover:text-gray-200" href="report.html"
+                >Report</a
+              >
+            </li>
+            <li>
+              <a class="text-white hover:text-gray-200" href="profile.html"
+                >Profile</a
+              >
+            </li>
+            <li>
+              <a class="text-white hover:text-gray-200" href="settings.html"
+                >Settings</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="flex flex-row items-center w-full">
+      <div class="w-1/3 bg- min-h-half">
+        <h1 class="text-2xl font-bold text-center mb-6" style="color: white">
+          Welcome to the Dashboard!
+        </h1>
+        <p class="text-gray-700 font-bold mb-4">
+          On this page, you will find a comprehensive analysis of social media
+          data and insights. We provide various metrics and visualizations to
+          help you understand the performance and engagement of your social
+          media accounts.
+        </p>
+        <h3 class="text-2xl font-bold text-left mb-6" style="color: white">
+          Key Features
+        </h3>
+        <p class="text-gray-700 font-bold mb-4">
+          Overview: Get a quick snapshot of your social media performance with
+          metrics such as total followers, likes, comments, and shares.<br />
+          <br />
+          Engagement Analytics: Dive deeper into the engagement data and analyze
+          trends over time. Track the number of likes, comments, and shares for
+          each post to identify the most engaging content.<br />
+          <br />
+          Audience Demographics: Understand your audience better with
+          demographic insights. Discover the age, gender, location, and
+          interests of your followers to tailor your content accordingly.
+          <br /><br />
+          Reach and Impressions: Measure the reach and impressions of your posts
+          to gauge the visibility and impact of your social media campaigns.<br /><br />
+          Content Analysis: Analyze the performance of individual posts and
+          identify top-performing content. Learn which types of posts resonate
+          best with your audience.
+        </p>
+      </div>
+      <div class="w-2/3">
+        <iframe
+          class="w-full p-4"
+          src="https://us1.ca.analytics.ibm.com/bi/?perspective=dashboard&amp;pathRef=.my_folders%2Fmedia_dashboard&amp;closeWindowOnLastView=true&amp;ui_appbar=false&amp;ui_navbar=false&amp;shareMode=embedded&amp;action=view&amp;mode=dashboard&amp;subView=model0000018834bd16c3_00000000"
+          height="400"
+          frameborder="0"
+          gesture="media"
+          allow="encrypted-media"
+          allowfullscreen=""
+        ></iframe>
+      </div>
+    </div>
+    <footer class="bg-gray-200 py-4">
+      <div class="container mx-auto text-center">
+        <p class="text-gray-700">
+          &copy; 2023 Our Website. All rights reserved.
+        </p>
+      </div>
+    </footer>
+    <br>
+  </body>
+</html>

@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<!-- Creation of Profile Page -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile</title>
+  <!-- Include Tailwind CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .profile-card {
+        max-width: 400px;
+        background-color: #F7FAFC;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 1.5rem;
+    }
+
+    .profile-card__username {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+    }
+
+    .profile-card__info {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.75rem;
+    }
+
+    .profile-card__label {
+        font-weight: bold;
+        margin-right: 0.5rem;
+        color: #718096;
+        width: 120px;
+    }
+
+    .profile-card__value {
+        color: #4A5568;
+    }
+</style>
+</head>
+
+<body class="bg-gray-100" style="
+background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQT-3GCsGHX9DbYVRI9ugNjQ9mxvkuNxnvYV7tFlrJye0bnubQIZiS4Sj5X-eEid5yVtSM&usqp=CAU');
+background-size: cover;
+background-position: center;
+" >
+  <header class="bg-blue-500 py-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-4xl font-bold text-white">PROFILE</h1>
+      <nav>
+        <ul class="flex space-x-4">
+          <li><a class="text-white hover:text-gray-200" href="dashboard.html">Dashboard</a></li>
+          <li><a class="text-white hover:text-gray-200" href="story.html">Story</a></li>
+          <li><a class="text-white hover:text-gray-200" href="report.html">Report</a></li>
+          <li><a class="text-white hover:text-gray-200" href="home.html">Home</a></li>
+          <li><a class="text-white hover:text-gray-200" href="settings.html">Settings</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="flex flex-col justify-center items-center min-h-screen">
+    <div class="w-full max-w-sm">
+      <div class="flex justify-center items-center  bg-gray-100">
+        <div class="profile-card" style="background-color: white;">
+            <div class="profile-card__username text-2xl font-bold text-center mb-4">User Profile</div>
+            <div class="profile-card__info">
+                <span class="profile-card__label">Username:</span>
+                <span class="profile-card__value" id="username"></span>
+            </div>
+            <div class="profile-card__info">
+                <span class="profile-card__label">Email:</span>
+                <span class="profile-card__value" id="email"></span>
+            </div>
+            <div class="profile-card__info">
+                <span class="profile-card__label">Password:</span>
+                <span class="profile-card__value" id="password"></span>
+            </div>
+            <div class="profile-card__info">
+                <span class="profile-card__label">Confirm Password:</span>
+                <span class="profile-card__value" id="confirmPassword"></span>
+            </div>
+        </div>
+    </div>
+
+
+
+    </div>
+  </div>
+  <script>
+    // Retrieve user data from localStorage
+    var userData = JSON.parse(localStorage.getItem('data'));
+    console.log(userData,"userData")
+    // Update the profile card with user data
+    if (userData) {
+        document.getElementById('username').textContent = userData.username;
+        document.getElementById('email').textContent = userData.email;
+        document.getElementById('password').textContent = userData.password;
+        document.getElementById('confirmPassword').textContent = userData.confirmPassword;
+    }
+</script>
+<footer class="bg-gray-200 py-4">
+  <div class="container mx-auto text-center">
+    <p class="text-gray-700">
+      &copy; 2023 Our Website. All rights reserved.
+    </p>
+  </div>
+</footer>
+<br>
+</body>
+
+</html>
+

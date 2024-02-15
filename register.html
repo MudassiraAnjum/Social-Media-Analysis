@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!-- Creation of Registration Page -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Page</title>
+    <!-- Include Tailwind CSS CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body
+    class="bg-gray-100"
+    style="
+      background-image: url('https://www.boostdigitalmedia.com/wp-content/uploads/2016/05/Depositphotos_26530697_l-2015-1024x684.jpg');
+      background-size: cover;
+      background-position: center;
+    "
+  >
+    <div class="flex flex-col justify-center items-center min-h-screen">
+      <div class="w-full max-w-sm">
+        <h1 class="text-2xl font-bold text-center mb-6">Register</h1>
+        <form
+          class="bg-gray-200 shadow-md rounded px-8 pt-6 pb-8 mb-4"
+          id="registrationForm"
+        >
+          <div class="mb-4">
+            <label
+              class="block text-gray-700 text-sm font-bold mb-2"
+              for="username"
+            >
+              Username
+            </label>
+            <input
+              class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="username"
+              type="text"
+              placeholder="Enter your username"
+            />
+          </div>
+          <div class="mb-4">
+            <label
+              class="block text-gray-700 text-sm font-bold mb-2"
+              for="email"
+            >
+              Email
+            </label>
+            <input
+              class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="email"
+              type="email"
+              placeholder="Enter your email"
+            />
+          </div>
+          <div class="mb-4">
+            <label
+              class="block text-gray-700 text-sm font-bold mb-2"
+              for="password"
+            >
+              Password
+            </label>
+            <input
+              class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="password"
+              type="password"
+              placeholder="Enter your password"
+            />
+          </div>
+          <div class="mb-6">
+            <label
+              class="block text-gray-700 text-sm font-bold mb-2"
+              for="confirmPassword"
+            >
+              Confirm Password
+            </label>
+            <input
+              class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="confirmPassword"
+              type="password"
+              placeholder="Confirm your password"
+            />
+          </div>
+          <div class="flex items-center justify-between">
+            <button
+              class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              type="button"
+              onclick="getFormData()"
+            >
+              Register
+            </button>
+          </div>
+        </form>
+        <p class="text-center text-gray-500 text-xs">
+          &copy; 2023 Your Company. All rights reserved.
+        </p>
+      </div>
+    </div>
+
+    <script>
+      function redirectToHome() {
+        // Redirect to the dashboard page
+        window.location.href = "home.html";
+      }
+
+      function getFormData() {
+        var username = document.getElementById("username").value;
+        var email = document.getElementById("email").value;
+        var password = document.getElementById("password").value;
+        var confirmPassword = document.getElementById("confirmPassword").value;
+
+        var jsonData = {
+          username: username,
+          email: email,
+          password: password,
+          confirmPassword: confirmPassword,
+        };
+        localStorage.setItem("data", JSON.stringify(jsonData));
+        redirectToHome();
+      }
+    </script>
+  </body>
+</html>
